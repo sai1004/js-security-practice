@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DOM XSS Test</title>
-  </head>
-  <body>
-    <h2>Message:</h2>
-    <p id="output"></p>
+    <head>
+        <meta charset="UTF-8" />
+        <title>DOM XSS Test</title>
+    </head>
+    <body>
+        <h2>Message:</h2>
+        <p id="output"></p>
 
-    <img src="profile-icon.avif" onload="alert('XSS')" />
-
-    <script>
-      // DOM XSS vulnerability
-      const params = new URLSearchParams(window.location.search);
-      const message = params.get("msg");
-      if (message) {
-        document.getElementById("output").innerHTML = message;
-      }
-    </script>
-  </body>
+        <!-- <img src="profile-icon.avif" onload="alert('XSS')" /> -->
+        <script>
+            // DOM XSS vulnerability
+            const params = new URLSearchParams(window.location.search);
+            const message = params.get("msg");
+            if (message) {
+                document.getElementById("output").innerHTML = message;
+            }
+        </script>
+    </body>
 </html>
