@@ -69,12 +69,12 @@ Try these in the `msg` parameter:
     ```
     <svg onload=alert('XSS')>
     ```
+---
 
-    # So How to Fix this vulnerability
+    # So How to Fix this vulnerability?
 
     **both exploiting and fixing** vulnerabilities will level up your web security skills big time. 💪
 
----
 
 ### ✅ Recap: DOM-Based XSS (Vulnerable)
 
